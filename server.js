@@ -1,30 +1,22 @@
 const express = require('express')
-
 const bodyParser = require('body-parser');
-
+const pdf = require('pdfkit');
+const fs = require('fs')
 const feedRoutes = require('./routes/feeds');
 const loggerRoutes = require('./routes/loggerRoute');
-
+const memberRoutes = require('./routes/memberRoutes');
 
 const server = express();
 const port = process.env.PORT || 8080;
 
-const members = require('./members')
+// Express now has native body parsing.
+server.use(express.json());
+server.use(express.urlencoded({extended: false}));
 
-
-
-
-
-// Api get all members
-server.get('/api/members', (req, res) => {
-    res.json(members)
-})
-
-
-server.use(bodyParser.json());
 server.use('/feed', feedRoutes)
 server.use('/router',loggerRoutes);
+server.use('/api',memberRoutes);
 
 server.listen(port, () => {
     console.log(`Server is running on port: ${port}`)
-})
+});

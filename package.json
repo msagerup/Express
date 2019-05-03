@@ -14,8 +14,12 @@
   },
   "dependencies": {
     "@types/moment": "^2.13.0",
+    "@types/pdfkit": "^0.7.36",
+    "@types/uuid": "^3.4.4",
     "body-parser": "^1.19.0",
     "express": "^4.16.4",
-    "moment": "^2.24.0"
+    "moment": "^2.24.0",
+    "pdfkit": "^0.9.1",
+    "uuid": "^3.3.2"
   }
 }

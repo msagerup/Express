@@ -6,6 +6,6 @@ exports.logger = (req, res, next) => {
 }
 
 exports.loggerGreeting = (req,res, next) => {
-    res.send('Hellllo')
+    res.send('Hellllo');
     next();
 }
