@@ -50,5 +50,6 @@ exports.createMember = (req, res) => {
     }
     membersArr.push(newMember)
     res.status(200).json(membersArr)
-    
+
 }
+
