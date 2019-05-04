@@ -1,5 +1,4 @@
 const express = require('express');
-
 const parkeringController = require('../controllers/parkeringController.js');
 const router = express.Router();
 
